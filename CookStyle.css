@@ -1,0 +1,79 @@
+
+
+body {
+    text-transform: capitalize;
+    background-image: url("Frost_BG.png");
+    /* background-size: 100%; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    height: 100vh;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  h1:first-child{
+    font-size: 3em;
+  }
+  h1, p {
+    font-family: 'Roboto', sans-serif; font-size: 1em;
+    font-weight: 600;
+    margin: 0 auto;
+    text-align: center;
+    padding: 30px;
+    color: white;
+  }
+
+  #bingotable ::selection {
+    visibility: hidden;
+  }
+  p a {
+    text-decoration: none;
+    color: #00ffff;
+  }
+
+  #squarefree {
+    color:black;
+    font-family: Helvetica;
+    margin: 0 auto;
+    background-image: url(BingoFrost.png);
+    background-size: cover;
+    /* background: #5dc4de; */
+    text-align: center;
+    font-weight: 600;
+    font-size: 15pt;
+  }
+
+  #bingotable {
+    margin: 0px auto;
+    text-align: center;
+    border-collapse: collapse;
+    background: white;
+  }
+
+  th, td {
+    color: white;
+    
+    background-size: cover;
+    font-family: Helvetica;
+    margin: 0 auto;
+    text-align: center;
+    border: 3px solid rgb(68,122,145);
+    background-image: url(BingoFrostNo.png);
+    height: 103px;
+    width: 103px;
+    word-wrap: break-word;
+  }
+
+
+  .orange {
+    color: rgb(255, 255, 255);
+    background: rgb(34, 57, 90);
+    height: 50px;
+    width: 50px;
+    font-size: 3em;
+    border-color: rgb(34, 57, 90);
+  }
+
+ 
