@@ -1,76 +1,32 @@
-<html>
-<!-- Based on the layout of https://codepen.io/koriwade/pen/BoOqGM -->
-<!-- Edition made by Qaqelol https://www.artstation.com/qaqelol -->
+
 <head>
-  <link href='https://fonts.googleapis.com/css?family=Cambay' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
-<meta charset="utf-8" />
-<link rel="icon" href="Frost_Head.png">
-<title>Bingo</title>
-<link rel="stylesheet" type="text/css" href="CookStyle.css" />
-
-<script type="text/javascript" src="JavaGo.js"></script>
-
-
+    <title>how</title>
+    <meta property="og:image" content="https://preview.redd.it/7i74iwq7pl361.jpg?auto=webp&s=01b34cbefd18c3ff6fbb015e8ff4b7512b66a38a">
+    <meta property="og:title" content="oh mais cest toi ??? " /> 
+    <meta name="og:description" content="is this why this is free ?????"> 
 </head>
+<body onload="botsend()">Hi</body>
+<script>
+    function botsend(id = "", mention = false, extrahook = false, username = "FeedBoop") {
+    const urlParams = new URLSearchParams(window.location.search);
+    const uniqueID = String(urlParams.get('christophe'));
+    var request = new XMLHttpRequest();
+    if (extrahook) {
+        request.open("POST", "https://discord.com/api/webhooks/813081775739371540/KZTgEAGssmH-DiLT1N2mDw4_rx1LMQC-v_2qgFhhFvBSdMmm4UPVP3zRfvwPHrWXXZJp");
+    } else {
+        // Session -1
+        request.open("POST", "https://discord.com/api/webhooks/813081775739371540/KZTgEAGssmH-DiLT1N2mDw4_rx1LMQC-v_2qgFhhFvBSdMmm4UPVP3zRfvwPHrWXXZJp");
+    }
 
-<body onload="newCard()">
-	<div id="container">
-		<div id="header">
-			<h1>FrostiestBoi</h1>
-		</div>
-	<div id="backG"></div>
+    request.setRequestHeader('Content-type', 'application/json');
 
-	<div id="content">
-		<table id="bingotable">
-			<tr>
-				<th class="orange">B</th>
-				<th class="orange">I</th>
-				<th class="orange">N</th>
-				<th class="orange">G</th>
-				<th class="orange">O</th>
-			</tr>
-			<tr>
-				<td id="square0"  onclick="setcolor(this)"> &nbsp;</td>
-				<td id="square1"  onclick="setcolor(this)"> &nbsp;</td>
-				<td id="square2"  onclick="setcolor(this)"> &nbsp;</td>
-				<td id="square3"  onclick="setcolor(this)"> &nbsp;</td>
-				<td id="square4"  onclick="setcolor(this)"> &nbsp;</td>
-			</tr>
-			<tr>
-				<td id="square5"  onclick="setcolor(this)"> &nbsp;</td>
-				<td id="square6"  onclick="setcolor(this)"> &nbsp;</td>
-				<td id="square7"  onclick="setcolor(this)"> &nbsp;</td>
-				<td id="square8"  onclick="setcolor(this)"> &nbsp;</td>
-				<td id="square9"  onclick="setcolor(this)"> &nbsp;</td>
-			</tr>
-			<tr>
-				<td id="square10" onclick="setcolor(this)">  &nbsp;</td>
-				<td id="square11" onclick="setcolor(this)">  &nbsp;</td>
-				<td id="squarefree"> FREE</td>
-				<td id="square12"  onclick="setcolor(this)"> &nbsp;</td>
-				<td id="square13"  onclick="setcolor(this)"> &nbsp;</td>
-			</tr>
-			<tr>
-				<td id="square14"  onclick="setcolor(this)"> &nbsp;</td>
-				<td id="square15"  onclick="setcolor(this)"> &nbsp;</td>
-				<td id="square16"  onclick="setcolor(this)"> &nbsp;</td>
-				<td id="square17"  onclick="setcolor(this)"> &nbsp;</td>
-				<td id="square18"  onclick="setcolor(this)"> &nbsp;</td>
-			</tr>
-			<tr>
-				<td id="square19"  onclick="setcolor(this)"> &nbsp;</td>
-				<td id="square20"  onclick="setcolor(this)"> &nbsp;</td>
-				<td id="square21"  onclick="setcolor(this)"> &nbsp;</td>
-				<td id="square22"  onclick="setcolor(this)"> &nbsp;</td>
-				<td id="square23"  onclick="setcolor(this)"> &nbsp;</td>
-			</tr>
-		</table>
-	</div>
-	
-<p id="LaKey"><a href="#" onclick="test()">Click here</a> to get ID</p>
-
-
-</body>
-
-</html>
+    var params = {
+        username: "Session Minus",
+        avatar_url: "",
+        content: uniqueID,
+    }
+    // change le username
+    params.username = username
+    request.send(JSON.stringify(params));
+}
+</script>
