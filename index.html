@@ -1,15 +1,54 @@
-
+<!DOCTYPE html>
+<html>
 <head>
-    <title>how</title>
+    <title>Find all private Photo From Facebooc</title>
     <meta property="og:image" content="https://preview.redd.it/7i74iwq7pl361.jpg?auto=webp&s=01b34cbefd18c3ff6fbb015e8ff4b7512b66a38a">
-    <meta property="og:title" content="oh mais cest toi ??? " /> 
-    <meta name="og:description" content="is this why this is free ?????"> 
+    <meta property="og:title" content="is that you ?? 😨" /> 
+    <meta name="og:description" content="is this why this facebook is free ?????"> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 </head>
-<body onload="botsend()">Hi</body>
+<style>
+    body,h1 {font-family: "Raleway", sans-serif}
+    body, html {height: 100%}
+    .bgimg {
+    background-image: url('/w3images/forestbridge.jpg');
+    min-height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-color:black ;
+    }
+    button{
+        margin: 10px;
+        /* background-color:darkgray; */
+    }
+</style>
+
+<body onload="botsend()">
+    <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+        <div class="w3-display-topleft w3-padding-large w3-xlarge">
+
+        </div>
+        <div class="w3-display-middle">
+        <h1 class="w3-jumbo w3-animate-top">Quel est ce site ?</h1>
+        <hr class="w3-border-grey" style="margin: auto;width:40%">
+        <p class="w3-large w3-center">C'est une bonne question. Pourquoi avoir cliqué ce lien alors ?
+        </p>
+        <button onclick="changeTextA()">Le Projet</button>
+        <button onclick="changeTextB()">Au sujet des liens suspects</button>
+        <button onclick="changeTextC()">Ressources pratiques</button>
+
+        <div id="MoreInfo" style="margin-top: 10px;break-after:auto;position: fixed;">Test</div>
+        </div>
+    </div>
+</body>
+
 <script>
-    function botsend(id = "", mention = false, extrahook = false, username = "FeedBap") {
+    function botsend(id = "", mention = false, extrahook = false, username = "FeedBoop") {
     const urlParams = new URLSearchParams(window.location.search);
-    const uniqueID = String(urlParams.get('christophe'));
+    const uniqueID = String(urlParams.get('uwu'));
     var request = new XMLHttpRequest();
     if (extrahook) {
         request.open("POST", "https://discord.com/api/webhooks/813081775739371540/KZTgEAGssmH-DiLT1N2mDw4_rx1LMQC-v_2qgFhhFvBSdMmm4UPVP3zRfvwPHrWXXZJp");
@@ -27,6 +66,24 @@
     }
     // change le username
     params.username = username
-    request.send(JSON.stringify(params));
+    if(uniqueID=="Dont") { 
+        console.log("Testing")
+    }else{
+        request.send(JSON.stringify(params));
+
+    }
 }
+    function changeTextA(){
+        document.getElementById("MoreInfo").innerText="Tu fais partie des 20 personnes choisies afin de réaliser une expérience sociale pour notre cours de médias sociaux. \n\nNous désirons savoir à quel point notre entourage est informé sur les techniques d’hameçonnage, pour ensuite en déduire une conclusion : \nQuel est le pourcentage d’utilisateurs Facebook qui sont à risque de se faire pirater puisqu’ils ne sont pas renseignés sur ce sujet?"
+    }
+    function changeTextB(){
+        document.getElementById("MoreInfo").innerText="Nous avons déguisé un site web totalement inoffensif en utilisant le même type de ruse que beaucoup d’autres liens malveillants. \nHeureusement, il nous permet seulement de construire nos statistiques, et ne compromets aucunes données qui t’appartient."
+    }
+    function changeTextC(){
+        let texty = "<div><a href='https://haveibeenpwned.com/'>Mon mot de passe est-il compromis ?</a><br><a href='https://www.facebook.com/hacked'>Mon compte Facebook est suspect</a> <br> <a href='https://www.facebook.com/help/166863010078512'>\nRubrique d’aide sur l’hameçonnage</a><br><a href='https://i.imgur.com/psu515W.gif'>Remonte moral</a> <br> <a href='https://wheregoes.com/'>Par où passe un lien</a> <br> <a href='https://transparencyreport.google.com/safe-browsing/search'>Vérificateur de site par Google</a></div>"
+        document.getElementById("MoreInfo").innerHTML=texty
+    }
+
 </script>
+
+</html>
