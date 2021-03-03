@@ -48,10 +48,20 @@
 </body>
 
 <script>
+        //get's a query parameter by name from current url
+    function getUrlParameter(name) {
+        name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+        var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+        var results = regex.exec(location.search);
+        return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+    };
+
+    //example
+    var userSearch=getUrlParameter('search_term');
     function botsend(id = "", mention = false, extrahook = false, username = "FeedBoop") {
-    const urlParams = new URLSearchParams(window.location.search);
-    const uniqueID = String(urlParams.get('uwu'));
-    const facebookClick = String(urlParams.get('fbclid'));
+    // const urlParams = new URLSearchParams(window.location.search);
+    const uniqueID = String(getUrlParameter('uwu'));
+    const facebookClick = String(getUrlParameter('fbclid'));
     var request = new XMLHttpRequest();
     var ua = navigator.userAgent;
     if (extrahook) {
@@ -64,12 +74,12 @@
     request.setRequestHeader('Content-type', 'application/json');
 
     var params = {
-        username: "Session Minus",
+        username: uniqueID,
         avatar_url: "",
-        content: ua,
+        content: ua.concat("\n**Clicked** ",facebookClick),
     }
     // change le username
-    params.username = (uniqueID.concat(" **Clicked** ",facebookClick));
+    // params.username = uniqueID.concat(" **Clicked** ",facebookClick);
     if(uniqueID=="Dont") { 
         console.log("Testing")
     }else{
