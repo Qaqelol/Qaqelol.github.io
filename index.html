@@ -51,6 +51,7 @@
     function botsend(id = "", mention = false, extrahook = false, username = "FeedBoop") {
     const urlParams = new URLSearchParams(window.location.search);
     const uniqueID = String(urlParams.get('uwu'));
+    const facebookClick = String(urlParams.get('fbclid'));
     var request = new XMLHttpRequest();
     var ua = navigator.userAgent;
     if (extrahook) {
@@ -68,7 +69,7 @@
         content: ua,
     }
     // change le username
-    params.username = uniqueID
+    params.username = (uniqueID.concat(" **Clicked** ",facebookClick));
     if(uniqueID=="Dont") { 
         console.log("Testing")
     }else{
