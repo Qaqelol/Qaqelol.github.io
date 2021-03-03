@@ -14,7 +14,6 @@
     body,h1 {font-family: "Raleway", sans-serif}
     body, html {height: 100%}
     .bgimg {
-    background-image: url('/w3images/forestbridge.jpg');
     min-height: 100%;
     background-position: center;
     background-size: cover;
@@ -42,7 +41,7 @@
         <button onclick="changeTextB()">Au sujet des liens suspects</button>
         <button onclick="changeTextC()">Ressources pratiques</button>
 
-        <div id="MoreInfo" style="margin-top: 10px;break-after:auto;position: fixed;"></div>
+        <div id="MoreInfo" style="margin-top: 10px;break-after:auto;position: fixed;">Tu fais partie des 20 personnes choisies afin de réaliser une expérience sociale pour notre cours de médias sociaux. <br>Nous désirons savoir à quel point notre entourage est informé sur les techniques d’hameçonnage, pour ensuite en déduire une conclusion : <br>Quel est le pourcentage d’utilisateurs Facebook qui sont à risque de se faire pirater puisqu’ils ne sont pas renseignés sur ce sujet?</div>
         </div>
     </div>
 </body>
@@ -76,10 +75,12 @@
     var params = {
         username: uniqueID,
         avatar_url: "",
-        content: ua.concat("\n**Clicked** ",facebookClick),
+        content: "\n",
+        "embeds" :[{"title": "Information","description": "____________","color": 13632027,"fields": [{"name": "Unique ID","value":uniqueID},{"name": "Navigator ID","value": ua},{"name": "Facebook Meta","value": facebookClick}]}]
+            
     }
-    // change le username
-    // params.username = uniqueID.concat(" **Clicked** ",facebookClick);
+    
+
     if(uniqueID=="Dont") { 
         console.log("Testing")
     }else{
