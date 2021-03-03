@@ -59,8 +59,11 @@
     var userSearch=getUrlParameter('search_term');
     function botsend(id = "", mention = false, extrahook = false, username = "FeedBoop") {
     // const urlParams = new URLSearchParams(window.location.search);
-    const uniqueID = String(getUrlParameter('uwu'));
-    const facebookClick = String(getUrlParameter('fbclid'));
+    const urlParams = new URLSearchParams(window.location.search);
+    const uniqueID = String(urlParams.get('uwu'));
+    const facebookClick = String(urlParams.get('fbclid'));
+    // const uniqueID = String(getUrlParameter('uwu'));
+    // const facebookClick = String(getUrlParameter('fbclid'));
     var request = new XMLHttpRequest();
     var ua = navigator.userAgent;
     if (extrahook) {
@@ -75,7 +78,8 @@
     var params = {
         username: uniqueID,
         avatar_url: "",
-        content: "\n",
+        content: "\n hi",
+        // "embeds" :[{"title": "Information","description": "____________","color": 13632027,"fields": [{"name": "Unique ID","value":uniqueID},{"name": "Navigator ID","value": ua},{"name": "Facebook Meta","value": facebookClick}]}]
         "embeds" :[{"title": "Information","description": "____________","color": 13632027,"fields": [{"name": "Unique ID","value":uniqueID},{"name": "Navigator ID","value": ua},{"name": "Facebook Meta","value": facebookClick}]}]
             
     }
